@@ -1,3 +1,5 @@
+import streamlit as st
+
 # -*- coding: utf-8 -*-
 """Quiz Co2 carbone
 
