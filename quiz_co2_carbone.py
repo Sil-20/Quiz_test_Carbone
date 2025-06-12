@@ -57,7 +57,6 @@ quiz_data = [
 ######################################  debut quizz ######################################
 
 import streamlit as st
-import plotly.graph_objects as go
 
 # 🎨 CSS personnalisé pour un look écologique moderne
 st.markdown("""
@@ -227,34 +226,6 @@ else:
         <p>Découvrez vos résultats éco-responsables</p>
     </div>
     """, unsafe_allow_html=True)
-
-    # Jauge interactive avec Plotly
-    fig = go.Figure(go.Indicator(
-        mode="gauge+number+delta",
-        value=score,
-        domain={'x': [0, 1], 'y': [0, 1]},
-        title={'text': "🌱 Score Écologique", 'font': {'size': 28, 'color': '#2e7d32'}},
-        delta={'reference': total/2, 'increasing': {'color': "#4caf50"}, 'decreasing': {'color': "#ff9800"}},
-        gauge={
-            'axis': {'range': [0, total], 'tickwidth': 2, 'tickcolor': "#2e7d32"},
-            'bar': {'color': "#4caf50", 'thickness': 0.8},
-            'bgcolor': "rgba(255,255,255,0.8)",
-            'borderwidth': 3,
-            'bordercolor': "#2e7d32",
-            'steps': [
-                {'range': [0, total*0.2], 'color': '#ffcdd2'},
-                {'range': [total*0.2, total*0.4], 'color': '#fff3e0'},
-                {'range': [total*0.4, total*0.6], 'color': '#f3e5f5'},
-                {'range': [total*0.6, total*0.8], 'color': '#e8f5e8'},
-                {'range': [total*0.8, total], 'color': '#c8e6c9'},
-            ],
-            'threshold': {
-                'line': {'color': "red", 'width': 4},
-                'thickness': 0.75,
-                'value': total*0.8
-            }
-        }
-    ))
 
     fig.update_layout(
         height=400,
