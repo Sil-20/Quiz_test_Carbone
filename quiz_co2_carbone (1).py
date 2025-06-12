@@ -1,6 +1,5 @@
 import streamlit as st
-import plotly.figure_factory as ff
-
+import plotly.graph_objects as go
 
 # -*- coding: utf-8 -*-
 """Quiz Co2 carbone
