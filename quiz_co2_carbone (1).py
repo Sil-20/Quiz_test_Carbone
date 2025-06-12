@@ -1,6 +1,3 @@
-import streamlit as st
-import plotly.graph_objects as go
-
 # -*- coding: utf-8 -*-
 """Quiz Co2 carbone
 
@@ -58,6 +55,9 @@ quiz_data = [
 ]
 
 ######################################  debut quizz ######################################
+
+import streamlit as st
+import plotly.graph_objects as go
 
 # 🎨 CSS personnalisé pour un look écologique moderne
 st.markdown("""
