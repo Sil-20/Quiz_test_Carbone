@@ -1,4 +1,6 @@
 import streamlit as st
+import plotly.figure_factory as ff
+
 
 # -*- coding: utf-8 -*-
 """Quiz Co2 carbone
